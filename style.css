@@ -1,0 +1,225 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 顶部导航 */
+.header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 20px 0;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 28px;
+    color: #667eea;
+    margin-bottom: 5px;
+}
+
+.tagline {
+    font-size: 14px;
+    color: #666;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+
+.nav a:hover {
+    background: #667eea;
+    color: white;
+}
+
+/* 搜索栏 */
+.search-section {
+    padding: 40px 0;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.search-box {
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.search-box input {
+    flex: 1;
+    padding: 20px 30px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-box button {
+    padding: 20px 40px;
+    background: #667eea;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.search-box button:hover {
+    background: #764ba2;
+}
+
+/* 主要内容 */
+.main {
+    background: #f5f7fa;
+    padding: 40px 0;
+}
+
+/* 分类 */
+.category {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.category-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #667eea;
+}
+
+.subcategory {
+    margin-bottom: 30px;
+}
+
+.subcategory h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #667eea;
+}
+
+/* 链接网格 */
+.link-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.link-card {
+    display: flex;
+    align-items: center;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.link-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.2);
+    border-color: #667eea;
+}
+
+.link-icon {
+    font-size: 32px;
+    margin-right: 15px;
+}
+
+.link-info h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.link-info p {
+    font-size: 13px;
+    color: #666;
+}
+
+/* 省级医保局简化样式 */
+.link-grid .link-card h4 {
+    margin: 0;
+    font-size: 15px;
+}
+
+/* 页脚 */
+.footer {
+    background: #2d3436;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #ddd;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .link-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .search-box {
+        flex-direction: column;
+        border-radius: 20px;
+    }
+
+    .search-box input,
+    .search-box button {
+        width: 100%;
+    }
+}

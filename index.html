@@ -15,11 +15,14 @@
                 <p class="tagline">医保政策研究者的百宝箱</p>
             </div>
             <nav class="nav">
-                <a href="#official">政府机构</a>
+                <a href="#nhsa">国家医保局</a>
+                <a href="#official">国家机构</a>
+                <a href="#province">省级医保</a>
                 <a href="#research">研究机构</a>
                 <a href="#international">国际组织</a>
                 <a href="#media">新闻媒体</a>
                 <a href="#tools">实用工具</a>
+                <a href="#hot">常用网站</a>
             </nav>
         </div>
     </header>
@@ -27,9 +30,15 @@
     <!-- 搜索栏 -->
     <section class="search-section">
         <div class="container">
-            <div class="search-box">
-                <input type="text" id="searchInput" placeholder="搜索网站名称或关键词...">
-                <button onclick="searchLinks()">🔍 搜索</button>
+            <div class="search-boxes">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="站内搜索：网站名称或关键词...">
+                    <button onclick="searchLinks()">🔍 站内搜索</button>
+                </div>
+                <form class="search-box sogou-box" action="https://www.sogou.com/web" method="get" target="_blank" rel="noopener">
+                    <input type="text" name="query" placeholder="搜狗搜索：医保政策、药品目录、集采...">
+                    <button type="submit">🐶 搜狗搜索</button>
+                </form>
             </div>
         </div>
     </section>
@@ -37,18 +46,18 @@
     <!-- 主要内容 -->
     <main class="main">
         <div class="container">
-            
-            <!-- 政府机构 -->
-            <section id="official" class="category">
-                <h2 class="category-title">🏛️ 政府机构</h2>
-                
+
+            <!-- 国家医保局 -->
+            <section id="nhsa" class="category">
+                <h2 class="category-title">🏥 国家医保局</h2>
+
                 <div class="subcategory">
-                    <h3>国家级医保机构</h3>
+                    <h3>官网与平台</h3>
                     <div class="link-grid">
                         <a href="https://www.nhsa.gov.cn" target="_blank" class="link-card">
                             <div class="link-icon">🏥</div>
                             <div class="link-info">
-                                <h4>国家医疗保障局</h4>
+                                <h4>国家医疗保障局官网</h4>
                                 <p>国家医保局官方网站</p>
                             </div>
                         </a>
@@ -56,95 +65,443 @@
                             <div class="link-icon">🔧</div>
                             <div class="link-info">
                                 <h4>国家医保服务平台</h4>
-                                <p>医保公共服务网上办事大厅</p>
+                                <p>医保公共服务网上办事大厅（目录查询、异地备案等）</p>
+                            </div>
+                        </a>
+                        <a href="https://www.nhsa.gov.cn/col/col257/index.html" target="_blank" class="link-card">
+                            <div class="link-icon">📊</div>
+                            <div class="link-info">
+                                <h4>医保数智厅</h4>
+                                <p>医保数据开放与智能服务专区</p>
+                            </div>
+                        </a>
+                        <a href="https://www.nhsa.gov.cn/col/col28/index.html" target="_blank" class="link-card">
+                            <div class="link-icon">🗺️</div>
+                            <div class="link-info">
+                                <h4>地方机构</h4>
+                                <p>全国各级医保部门机构导航</p>
                             </div>
                         </a>
                     </div>
                 </div>
 
                 <div class="subcategory">
-                    <h3>国务院及部委</h3>
+                    <h3>新闻资讯</h3>
+                    <div class="link-grid">
+                        <a href="https://www.nhsa.gov.cn/col/col5/index.html" target="_blank" class="link-card">
+                            <div class="link-icon">📰</div>
+                            <div class="link-info">
+                                <h4>医保新闻</h4>
+                                <p>国家医保局新闻栏目</p>
+                            </div>
+                        </a>
+                        <a href="https://www.nhsa.gov.cn/col/col14/index.html" target="_blank" class="link-card">
+                            <div class="link-icon">📢</div>
+                            <div class="link-info">
+                                <h4>医保动态</h4>
+                                <p>全国医保工作动态</p>
+                            </div>
+                        </a>
+                        <a href="https://www.nhsa.gov.cn/col/col46/index.html" target="_blank" class="link-card">
+                            <div class="link-icon">🎙️</div>
+                            <div class="link-info">
+                                <h4>媒体报道</h4>
+                                <p>主流媒体医保报道集锦</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="subcategory">
+                    <h3>政策法规</h3>
+                    <div class="link-grid">
+                        <a href="https://www.nhsa.gov.cn/col/col104/index.html" target="_blank" class="link-card">
+                            <div class="link-icon">📜</div>
+                            <div class="link-info">
+                                <h4>政策法规</h4>
+                                <p>医保法律法规与规范性文件</p>
+                            </div>
+                        </a>
+                        <a href="https://www.nhsa.gov.cn/col/col105/index.html" target="_blank" class="link-card">
+                            <div class="link-icon">💡</div>
+                            <div class="link-info">
+                                <h4>政策解读</h4>
+                                <p>政策文件权威解读</p>
+                            </div>
+                        </a>
+                        <a href="https://www.nhsa.gov.cn/col/col109/index.html" target="_blank" class="link-card">
+                            <div class="link-icon">📌</div>
+                            <div class="link-info">
+                                <h4>通知公告</h4>
+                                <p>最新通知与公告（集采、目录调整等）</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="subcategory">
+                    <h3>信息公开</h3>
+                    <div class="link-grid">
+                        <a href="https://www.nhsa.gov.cn/col/col99/index.html" target="_blank" class="link-card">
+                            <div class="link-icon">📂</div>
+                            <div class="link-info">
+                                <h4>政府信息公开</h4>
+                                <p>国家医保局信息公开专栏</p>
+                            </div>
+                        </a>
+                        <a href="https://www.nhsa.gov.cn/col/col107/index.html" target="_blank" class="link-card">
+                            <div class="link-icon">🗂️</div>
+                            <div class="link-info">
+                                <h4>法定主动公开内容</h4>
+                                <p>主动公开文件与报告</p>
+                            </div>
+                        </a>
+                        <a href="https://www.nhsa.gov.cn/col/col7/index.html" target="_blank" class="link-card">
+                            <div class="link-icon">📈</div>
+                            <div class="link-info">
+                                <h4>统计数据</h4>
+                                <p>医保基金收支、参保等统计数据</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 国家机构 -->
+            <section id="official" class="category">
+                <h2 class="category-title">🏛️ 国家机构</h2>
+
+                <div class="subcategory">
+                    <h3>党中央 · 全国人大 · 政协 · 军委</h3>
+                    <div class="link-grid">
+                        <a href="http://cpc.people.com.cn" target="_blank" class="link-card">
+                            <div class="link-icon">⭐</div>
+                            <div class="link-info">
+                                <h4>中国共产党新闻网</h4>
+                                <p>党中央权威信息发布平台</p>
+                            </div>
+                        </a>
+                        <a href="http://www.npc.gov.cn" target="_blank" class="link-card">
+                            <div class="link-icon">🏛️</div>
+                            <div class="link-info">
+                                <h4>全国人民代表大会</h4>
+                                <p>立法与监督机关</p>
+                            </div>
+                        </a>
+                        <a href="http://www.cppcc.gov.cn" target="_blank" class="link-card">
+                            <div class="link-icon">🤝</div>
+                            <div class="link-info">
+                                <h4>中国人民政治协商会议</h4>
+                                <p>全国政协官方网站</p>
+                            </div>
+                        </a>
+                        <a href="https://www.ccdi.gov.cn" target="_blank" class="link-card">
+                            <div class="link-icon">⚖️</div>
+                            <div class="link-info">
+                                <h4>中央纪委国家监委</h4>
+                                <p>纪检监察与反腐败</p>
+                            </div>
+                        </a>
+                        <a href="https://www.court.gov.cn" target="_blank" class="link-card">
+                            <div class="link-icon">🏛️</div>
+                            <div class="link-info">
+                                <h4>最高人民法院</h4>
+                                <p>审判机关与司法解释</p>
+                            </div>
+                        </a>
+                        <a href="https://www.spp.gov.cn" target="_blank" class="link-card">
+                            <div class="link-icon">🛡️</div>
+                            <div class="link-info">
+                                <h4>最高人民检察院</h4>
+                                <p>法律监督机关</p>
+                            </div>
+                        </a>
+                        <a href="https://www.mod.gov.cn" target="_blank" class="link-card">
+                            <div class="link-icon">🎖️</div>
+                            <div class="link-info">
+                                <h4>国防部（中央军委）</h4>
+                                <p>国防部官方网站</p>
+                            </div>
+                        </a>
+                        <a href="https://www.81.cn" target="_blank" class="link-card">
+                            <div class="link-icon">🪖</div>
+                            <div class="link-info">
+                                <h4>中国军网</h4>
+                                <p>解放军新闻传播中心</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="subcategory">
+                    <h3>国务院及医保相关部委</h3>
                     <div class="link-grid">
                         <a href="http://www.gov.cn" target="_blank" class="link-card">
                             <div class="link-icon">🏛️</div>
                             <div class="link-info">
                                 <h4>国务院</h4>
-                                <p>中华人民共和国中央人民政府</p>
+                                <p>中央人民政府门户网站</p>
                             </div>
                         </a>
                         <a href="http://www.nhc.gov.cn" target="_blank" class="link-card">
                             <div class="link-icon">⚕️</div>
                             <div class="link-info">
                                 <h4>国家卫生健康委员会</h4>
-                                <p>国家卫健委官方网站</p>
+                                <p>卫生健康行业主管部门</p>
                             </div>
                         </a>
                         <a href="https://www.ndrc.gov.cn" target="_blank" class="link-card">
                             <div class="link-icon">📊</div>
                             <div class="link-info">
                                 <h4>国家发展和改革委员会</h4>
-                                <p>国家发改委官方网站</p>
+                                <p>宏观经济与价格管理</p>
                             </div>
                         </a>
                         <a href="https://www.nmpa.gov.cn" target="_blank" class="link-card">
                             <div class="link-icon">💊</div>
                             <div class="link-info">
                                 <h4>国家药品监督管理局</h4>
-                                <p>国家药监局官方网站</p>
+                                <p>药品医疗器械监管</p>
                             </div>
                         </a>
                         <a href="http://www.mof.gov.cn" target="_blank" class="link-card">
                             <div class="link-icon">💰</div>
                             <div class="link-info">
                                 <h4>财政部</h4>
-                                <p>财政部官方网站</p>
+                                <p>财政与医保补助政策</p>
                             </div>
                         </a>
                         <a href="http://www.mohrss.gov.cn" target="_blank" class="link-card">
                             <div class="link-icon">👥</div>
                             <div class="link-info">
                                 <h4>人力资源和社会保障部</h4>
-                                <p>人社部官方网站</p>
+                                <p>社保与就业政策</p>
+                            </div>
+                        </a>
+                        <a href="https://www.mca.gov.cn" target="_blank" class="link-card">
+                            <div class="link-icon">🏠</div>
+                            <div class="link-info">
+                                <h4>民政部</h4>
+                                <p>社会救助与福利政策</p>
+                            </div>
+                        </a>
+                        <a href="https://www.chinatax.gov.cn" target="_blank" class="link-card">
+                            <div class="link-icon">🧾</div>
+                            <div class="link-info">
+                                <h4>国家税务总局</h4>
+                                <p>税收政策（商业健康险个税优惠）</p>
+                            </div>
+                        </a>
+                        <a href="https://www.stats.gov.cn" target="_blank" class="link-card">
+                            <div class="link-icon">📈</div>
+                            <div class="link-info">
+                                <h4>国家统计局</h4>
+                                <p>国民经济与社会发展统计</p>
+                            </div>
+                        </a>
+                        <a href="https://www.samr.gov.cn" target="_blank" class="link-card">
+                            <div class="link-icon">🏷️</div>
+                            <div class="link-info">
+                                <h4>国家市场监督管理总局</h4>
+                                <p>反垄断与公平竞争（医药行业）</p>
+                            </div>
+                        </a>
+                        <a href="https://www.natcm.gov.cn" target="_blank" class="link-card">
+                            <div class="link-icon">🌿</div>
+                            <div class="link-info">
+                                <h4>国家中医药管理局</h4>
+                                <p>中医药行业管理</p>
+                            </div>
+                        </a>
+                        <a href="https://www.ndcpa.gov.cn" target="_blank" class="link-card">
+                            <div class="link-icon">🦠</div>
+                            <div class="link-info">
+                                <h4>国家疾病预防控制局</h4>
+                                <p>疾病预防控制管理</p>
+                            </div>
+                        </a>
+                        <a href="https://www.nfra.gov.cn" target="_blank" class="link-card">
+                            <div class="link-icon">🏦</div>
+                            <div class="link-info">
+                                <h4>国家金融监督管理总局</h4>
+                                <p>保险业监管（商业健康保险）</p>
                             </div>
                         </a>
                     </div>
                 </div>
 
-                <div class="subcategory">
-                    <h3>省级医保局</h3>
+                <details class="collapse">
+                    <summary>📁 其他部委（28 个，点击展开）</summary>
                     <div class="link-grid">
-                        <a href="http://ybj.beijing.gov.cn" target="_blank" class="link-card"><h4>北京市医保局</h4></a>
-                        <a href="https://ybj.sh.gov.cn" target="_blank" class="link-card"><h4>上海市医保局</h4></a>
-                        <a href="http://ylbzj.hebei.gov.cn" target="_blank" class="link-card"><h4>河北省医保局</h4></a>
-                        <a href="http://ybj.shanxi.gov.cn" target="_blank" class="link-card"><h4>山西省医保局</h4></a>
-                        <a href="http://ylbzj.nmg.gov.cn" target="_blank" class="link-card"><h4>内蒙古自治区医保局</h4></a>
-                        <a href="http://ybj.ln.gov.cn" target="_blank" class="link-card"><h4>辽宁省医保局</h4></a>
-                        <a href="http://ybj.jl.gov.cn" target="_blank" class="link-card"><h4>吉林省医保局</h4></a>
-                        <a href="http://ybj.hlj.gov.cn" target="_blank" class="link-card"><h4>黑龙江省医保局</h4></a>
-                        <a href="http://ybj.js.gov.cn" target="_blank" class="link-card"><h4>江苏省医保局</h4></a>
-                        <a href="http://ybj.zj.gov.cn" target="_blank" class="link-card"><h4>浙江省医保局</h4></a>
-                        <a href="https://ybj.ah.gov.cn" target="_blank" class="link-card"><h4>安徽省医保局</h4></a>
-                        <a href="http://ybj.fj.gov.cn" target="_blank" class="link-card"><h4>福建省医保局</h4></a>
-                        <a href="http://ybj.jiangxi.gov.cn" target="_blank" class="link-card"><h4>江西省医保局</h4></a>
-                        <a href="https://ybj.shandong.gov.cn" target="_blank" class="link-card"><h4>山东省医保局</h4></a>
-                        <a href="http://ybj.henan.gov.cn" target="_blank" class="link-card"><h4>河南省医保局</h4></a>
-                        <a href="http://ybj.hubei.gov.cn" target="_blank" class="link-card"><h4>湖北省医保局</h4></a>
-                        <a href="http://ybj.hunan.gov.cn" target="_blank" class="link-card"><h4>湖南省医保局</h4></a>
-                        <a href="http://ybj.gd.gov.cn" target="_blank" class="link-card"><h4>广东省医保局</h4></a>
-                        <a href="http://ybj.gxzf.gov.cn" target="_blank" class="link-card"><h4>广西自治区医保局</h4></a>
-                        <a href="http://ybj.hainan.gov.cn" target="_blank" class="link-card"><h4>海南省医保局</h4></a>
-                        <a href="http://ybj.cq.gov.cn" target="_blank" class="link-card"><h4>重庆市医保局</h4></a>
-                        <a href="http://ybj.sc.gov.cn" target="_blank" class="link-card"><h4>四川省医保局</h4></a>
-                        <a href="http://ybj.guizhou.gov.cn" target="_blank" class="link-card"><h4>贵州省医保局</h4></a>
-                        <a href="http://ybj.yn.gov.cn" target="_blank" class="link-card"><h4>云南省医保局</h4></a>
-                        <a href="http://ybj.xizang.gov.cn" target="_blank" class="link-card"><h4>西藏自治区医保局</h4></a>
-                        <a href="https://ybj.shaanxi.gov.cn" target="_blank" class="link-card"><h4>陕西省医保局</h4></a>
-                        <a href="http://ybj.gansu.gov.cn" target="_blank" class="link-card"><h4>甘肃省医保局</h4></a>
-                        <a href="http://ybj.qh.gov.cn" target="_blank" class="link-card"><h4>青海省医保局</h4></a>
-                        <a href="http://ybj.nx.gov.cn" target="_blank" class="link-card"><h4>宁夏自治区医保局</h4></a>
-                        <a href="http://ylbzj.xinjiang.gov.cn" target="_blank" class="link-card"><h4>新疆自治区医保局</h4></a>
+                        <a href="https://www.fmprc.gov.cn" target="_blank" class="link-card"><h4>外交部</h4></a>
+                        <a href="https://www.moe.gov.cn" target="_blank" class="link-card"><h4>教育部</h4></a>
+                        <a href="https://www.miit.gov.cn" target="_blank" class="link-card"><h4>工业和信息化部</h4></a>
+                        <a href="https://www.mps.gov.cn" target="_blank" class="link-card"><h4>公安部</h4></a>
+                        <a href="https://www.moj.gov.cn" target="_blank" class="link-card"><h4>司法部</h4></a>
+                        <a href="https://www.mnr.gov.cn" target="_blank" class="link-card"><h4>自然资源部</h4></a>
+                        <a href="https://www.mee.gov.cn" target="_blank" class="link-card"><h4>生态环境部</h4></a>
+                        <a href="https://www.mohurd.gov.cn" target="_blank" class="link-card"><h4>住房和城乡建设部</h4></a>
+                        <a href="https://www.mot.gov.cn" target="_blank" class="link-card"><h4>交通运输部</h4></a>
+                        <a href="https://www.mwr.gov.cn" target="_blank" class="link-card"><h4>水利部</h4></a>
+                        <a href="https://www.moa.gov.cn" target="_blank" class="link-card"><h4>农业农村部</h4></a>
+                        <a href="https://www.mofcom.gov.cn" target="_blank" class="link-card"><h4>商务部</h4></a>
+                        <a href="https://www.mct.gov.cn" target="_blank" class="link-card"><h4>文化和旅游部</h4></a>
+                        <a href="https://www.mva.gov.cn" target="_blank" class="link-card"><h4>退役军人事务部</h4></a>
+                        <a href="https://www.mem.gov.cn" target="_blank" class="link-card"><h4>应急管理部</h4></a>
+                        <a href="https://www.pbc.gov.cn" target="_blank" class="link-card"><h4>中国人民银行</h4></a>
+                        <a href="https://www.audit.gov.cn" target="_blank" class="link-card"><h4>审计署</h4></a>
+                        <a href="https://www.sasac.gov.cn" target="_blank" class="link-card"><h4>国务院国资委</h4></a>
+                        <a href="https://www.customs.gov.cn" target="_blank" class="link-card"><h4>海关总署</h4></a>
+                        <a href="https://www.nrta.gov.cn" target="_blank" class="link-card"><h4>国家广播电视总局</h4></a>
+                        <a href="https://www.sport.gov.cn" target="_blank" class="link-card"><h4>国家体育总局</h4></a>
+                        <a href="https://www.nea.gov.cn" target="_blank" class="link-card"><h4>国家能源局</h4></a>
+                        <a href="https://www.cnipa.gov.cn" target="_blank" class="link-card"><h4>国家知识产权局</h4></a>
+                        <a href="https://www.gjxfj.gov.cn" target="_blank" class="link-card"><h4>国家信访局</h4></a>
+                        <a href="https://www.nia.gov.cn" target="_blank" class="link-card"><h4>国家移民管理局</h4></a>
+                        <a href="https://www.nra.gov.cn" target="_blank" class="link-card"><h4>国家铁路局</h4></a>
+                        <a href="https://www.caac.gov.cn" target="_blank" class="link-card"><h4>中国民用航空局</h4></a>
+                        <a href="https://www.spb.gov.cn" target="_blank" class="link-card"><h4>国家邮政局</h4></a>
+                    </div>
+                </details>
+            </section>
+
+            <!-- 省级医保部门 -->
+            <section id="province" class="category">
+                <h2 class="category-title">🗺️ 省级医保部门</h2>
+
+                <div class="subcategory">
+                    <h3>31 省区市 + 兵团</h3>
+                    <div class="link-grid">
+                        <a href="https://ybj.beijing.gov.cn" target="_blank" class="link-card"><h4>北京医保局</h4></a>
+                        <a href="https://ybj.tj.gov.cn" target="_blank" class="link-card"><h4>天津医保局</h4></a>
+                        <a href="https://ylbzj.hebei.gov.cn" target="_blank" class="link-card"><h4>河北医保局</h4></a>
+                        <a href="https://ybj.shanxi.gov.cn" target="_blank" class="link-card"><h4>山西医保局</h4></a>
+                        <a href="https://ylbzj.nmg.gov.cn" target="_blank" class="link-card"><h4>内蒙古医保局</h4></a>
+                        <a href="https://ybj.ln.gov.cn" target="_blank" class="link-card"><h4>辽宁医保局</h4></a>
+                        <a href="https://ybj.jl.gov.cn" target="_blank" class="link-card"><h4>吉林医保局</h4></a>
+                        <a href="https://ybj.hlj.gov.cn" target="_blank" class="link-card"><h4>黑龙江医保局</h4></a>
+                        <a href="https://ybj.jiangsu.gov.cn" target="_blank" class="link-card"><h4>江苏医保局</h4></a>
+                        <a href="https://ybj.zj.gov.cn" target="_blank" class="link-card"><h4>浙江医保局</h4></a>
+                        <a href="https://ybj.ah.gov.cn" target="_blank" class="link-card"><h4>安徽医保局</h4></a>
+                        <a href="https://ybj.fj.gov.cn" target="_blank" class="link-card"><h4>福建医保局</h4></a>
+                        <a href="https://ybj.jiangxi.gov.cn" target="_blank" class="link-card"><h4>江西医保局</h4></a>
+                        <a href="https://ybj.shandong.gov.cn" target="_blank" class="link-card"><h4>山东医保局</h4></a>
+                        <a href="https://ylbz.henan.gov.cn" target="_blank" class="link-card"><h4>河南医保局</h4></a>
+                        <a href="https://ybj.hubei.gov.cn" target="_blank" class="link-card"><h4>湖北医保局</h4></a>
+                        <a href="https://ybj.hunan.gov.cn" target="_blank" class="link-card"><h4>湖南医保局</h4></a>
+                        <a href="https://hsa.gd.gov.cn" target="_blank" class="link-card"><h4>广东医保局</h4></a>
+                        <a href="http://ybj.gxzf.gov.cn" target="_blank" class="link-card"><h4>广西医保局</h4></a>
+                        <a href="https://ybj.hainan.gov.cn" target="_blank" class="link-card"><h4>海南医保局</h4></a>
+                        <a href="https://ylbzj.cq.gov.cn" target="_blank" class="link-card"><h4>重庆医保局</h4></a>
+                        <a href="https://ylbzj.sc.gov.cn" target="_blank" class="link-card"><h4>四川医保局</h4></a>
+                        <a href="https://ylbzj.guizhou.gov.cn" target="_blank" class="link-card"><h4>贵州医保局</h4></a>
+                        <a href="https://ylbz.yn.gov.cn" target="_blank" class="link-card"><h4>云南医保局</h4></a>
+                        <a href="https://ylbzj.xizang.gov.cn" target="_blank" class="link-card"><h4>西藏医保局</h4></a>
+                        <a href="https://ybj.shaanxi.gov.cn" target="_blank" class="link-card"><h4>陕西医保局</h4></a>
+                        <a href="https://ylbz.gansu.gov.cn" target="_blank" class="link-card"><h4>甘肃医保局</h4></a>
+                        <a href="https://ybj.qinghai.gov.cn" target="_blank" class="link-card"><h4>青海医保局</h4></a>
+                        <a href="https://ylbz.nx.gov.cn" target="_blank" class="link-card"><h4>宁夏医保局</h4></a>
+                        <a href="https://ylbzj.xinjiang.gov.cn" target="_blank" class="link-card"><h4>新疆医保局</h4></a>
+                        <a href="https://www.xjbt.gov.cn" target="_blank" class="link-card"><h4>新疆兵团医保局 <span class="note-tag">跳转兵团政府网</span></h4></a>
                     </div>
                 </div>
+
+                <div class="subcategory">
+                    <h3>港澳台</h3>
+                    <div class="link-grid">
+                        <a href="https://www.healthbureau.gov.hk" target="_blank" class="link-card">
+                            <div class="link-icon">🇭🇰</div>
+                            <div class="link-info">
+                                <h4>香港医务卫生局</h4>
+                                <p>香港医疗与卫生政策</p>
+                            </div>
+                        </a>
+                        <a href="https://www.ha.org.hk" target="_blank" class="link-card">
+                            <div class="link-icon">🏥</div>
+                            <div class="link-info">
+                                <h4>香港医院管理局</h4>
+                                <p>香港公立医院服务管理</p>
+                            </div>
+                        </a>
+                        <a href="https://www.dh.gov.hk" target="_blank" class="link-card">
+                            <div class="link-icon">🩺</div>
+                            <div class="link-info">
+                                <h4>香港卫生署</h4>
+                                <p>香港公共健康服务</p>
+                            </div>
+                        </a>
+                        <a href="https://www.ssm.gov.mo" target="_blank" class="link-card">
+                            <div class="link-icon">🇲🇴</div>
+                            <div class="link-info">
+                                <h4>澳门卫生局</h4>
+                                <p>澳门医疗卫生管理</p>
+                            </div>
+                        </a>
+                        <a href="https://www.fss.gov.mo" target="_blank" class="link-card">
+                            <div class="link-icon">💼</div>
+                            <div class="link-info">
+                                <h4>澳门社会保障基金</h4>
+                                <p>澳门社会保障制度</p>
+                            </div>
+                        </a>
+                        <a href="https://www.mohw.gov.tw" target="_blank" class="link-card">
+                            <div class="link-icon">🇹🇼</div>
+                            <div class="link-info">
+                                <h4>台湾卫生福利部</h4>
+                                <p>台湾地区卫生福利政策（大陆网络受限）</p>
+                            </div>
+                        </a>
+                        <a href="https://www.nhi.gov.tw" target="_blank" class="link-card">
+                            <div class="link-icon">🏥</div>
+                            <div class="link-info">
+                                <h4>台湾中央健康保险署</h4>
+                                <p>台湾地区全民健保（大陆网络受限）</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 各省人民政府 -->
+            <section id="gov" class="category">
+                <h2 class="category-title">🏢 各省人民政府</h2>
+                <details class="collapse">
+                    <summary>📁 31 省区市 + 兵团人民政府（点击展开）</summary>
+                    <div class="link-grid">
+                        <a href="https://www.beijing.gov.cn" target="_blank" class="link-card"><h4>北京</h4></a>
+                        <a href="https://www.tj.gov.cn" target="_blank" class="link-card"><h4>天津</h4></a>
+                        <a href="https://www.hebei.gov.cn" target="_blank" class="link-card"><h4>河北</h4></a>
+                        <a href="https://www.shanxi.gov.cn" target="_blank" class="link-card"><h4>山西</h4></a>
+                        <a href="https://www.nmg.gov.cn" target="_blank" class="link-card"><h4>内蒙古</h4></a>
+                        <a href="https://www.ln.gov.cn" target="_blank" class="link-card"><h4>辽宁</h4></a>
+                        <a href="https://www.jl.gov.cn" target="_blank" class="link-card"><h4>吉林</h4></a>
+                        <a href="https://www.hlj.gov.cn" target="_blank" class="link-card"><h4>黑龙江</h4></a>
+                        <a href="https://www.shanghai.gov.cn" target="_blank" class="link-card"><h4>上海</h4></a>
+                        <a href="https://www.jiangsu.gov.cn" target="_blank" class="link-card"><h4>江苏</h4></a>
+                        <a href="https://www.zj.gov.cn" target="_blank" class="link-card"><h4>浙江</h4></a>
+                        <a href="https://www.ah.gov.cn" target="_blank" class="link-card"><h4>安徽</h4></a>
+                        <a href="https://www.fujian.gov.cn" target="_blank" class="link-card"><h4>福建</h4></a>
+                        <a href="https://www.jiangxi.gov.cn" target="_blank" class="link-card"><h4>江西</h4></a>
+                        <a href="https://www.shandong.gov.cn" target="_blank" class="link-card"><h4>山东</h4></a>
+                        <a href="https://www.henan.gov.cn" target="_blank" class="link-card"><h4>河南</h4></a>
+                        <a href="https://www.hubei.gov.cn" target="_blank" class="link-card"><h4>湖北</h4></a>
+                        <a href="https://www.hunan.gov.cn" target="_blank" class="link-card"><h4>湖南</h4></a>
+                        <a href="https://www.gd.gov.cn" target="_blank" class="link-card"><h4>广东</h4></a>
+                        <a href="https://www.gxzf.gov.cn" target="_blank" class="link-card"><h4>广西</h4></a>
+                        <a href="https://www.hainan.gov.cn" target="_blank" class="link-card"><h4>海南</h4></a>
+                        <a href="https://www.cq.gov.cn" target="_blank" class="link-card"><h4>重庆</h4></a>
+                        <a href="https://www.sc.gov.cn" target="_blank" class="link-card"><h4>四川</h4></a>
+                        <a href="https://www.guizhou.gov.cn" target="_blank" class="link-card"><h4>贵州</h4></a>
+                        <a href="https://www.yn.gov.cn" target="_blank" class="link-card"><h4>云南</h4></a>
+                        <a href="https://www.xizang.gov.cn" target="_blank" class="link-card"><h4>西藏</h4></a>
+                        <a href="https://www.shaanxi.gov.cn" target="_blank" class="link-card"><h4>陕西</h4></a>
+                        <a href="https://www.gansu.gov.cn" target="_blank" class="link-card"><h4>甘肃</h4></a>
+                        <a href="https://www.qinghai.gov.cn" target="_blank" class="link-card"><h4>青海</h4></a>
+                        <a href="https://www.nx.gov.cn" target="_blank" class="link-card"><h4>宁夏</h4></a>
+                        <a href="https://www.xinjiang.gov.cn" target="_blank" class="link-card"><h4>新疆</h4></a>
+                        <a href="https://www.xjbt.gov.cn" target="_blank" class="link-card"><h4>兵团</h4></a>
+                    </div>
+                </details>
             </section>
 
             <!-- 研究机构 -->
@@ -154,8 +511,8 @@
                     <a href="https://www.ccmu.edu.cn" target="_blank" class="link-card">
                         <div class="link-icon">🏛️</div>
                         <div class="link-info">
-                            <h4>首都医科大学国家医疗保障研究院</h4>
-                            <p>国家级医保研究高端智库</p>
+                            <h4>首都医科大学 · 国家医疗保障研究院</h4>
+                            <p>国家医保局与首医大共建国家级智库</p>
                         </div>
                     </a>
                     <a href="https://www.nhei.cn" target="_blank" class="link-card">
@@ -165,18 +522,11 @@
                             <p>卫生政策与管理研究</p>
                         </div>
                     </a>
-                    <a href="https://www.chira.org.cn" target="_blank" class="link-card">
+                    <a href="https://www.zgylbx.com" target="_blank" class="link-card">
                         <div class="link-icon">📚</div>
                         <div class="link-info">
-                            <h4>中国医疗保险研究会</h4>
-                            <p>医保理论研究与实践探索</p>
-                        </div>
-                    </a>
-                    <a href="https://www.sph.tsinghua.edu.cn" target="_blank" class="link-card">
-                        <div class="link-icon">🎓</div>
-                        <div class="link-info">
-                            <h4>清华大学医院管理研究院</h4>
-                            <p>医院管理与卫生政策研究</p>
+                            <h4>中国医疗保险研究会 · 中国医疗保险网</h4>
+                            <p>医保理论研究与《中国医疗保险》期刊</p>
                         </div>
                     </a>
                     <a href="https://www.bjmu.edu.cn" target="_blank" class="link-card">
@@ -184,6 +534,20 @@
                         <div class="link-info">
                             <h4>北京大学医学部</h4>
                             <p>医学教育与卫生政策研究</p>
+                        </div>
+                    </a>
+                    <a href="https://www.drc.gov.cn" target="_blank" class="link-card">
+                        <div class="link-icon">📈</div>
+                        <div class="link-info">
+                            <h4>国务院发展研究中心</h4>
+                            <p>国家级政策研究与咨询机构</p>
+                        </div>
+                    </a>
+                    <a href="https://www.calss.net.cn" target="_blank" class="link-card">
+                        <div class="link-icon">👥</div>
+                        <div class="link-info">
+                            <h4>中国劳动和社会保障科学研究院</h4>
+                            <p>人社部直属社保研究机构</p>
                         </div>
                     </a>
                 </div>
@@ -211,14 +575,14 @@
                         <div class="link-icon">📊</div>
                         <div class="link-info">
                             <h4>经济合作与发展组织 OECD</h4>
-                            <p>国际经济组织</p>
+                            <p>国际经济组织（卫生政策研究）</p>
                         </div>
                     </a>
                     <a href="https://www.cms.gov" target="_blank" class="link-card">
                         <div class="link-icon">🇺🇸</div>
                         <div class="link-info">
                             <h4>美国医疗保险和医疗补助服务中心 CMS</h4>
-                            <p>美国医保管理机构</p>
+                            <p>美国联邦医保管理机构</p>
                         </div>
                     </a>
                     <a href="https://www.nice.org.uk" target="_blank" class="link-card">
@@ -226,6 +590,27 @@
                         <div class="link-info">
                             <h4>英国国家卫生与临床优化研究所 NICE</h4>
                             <p>英国卫生技术评估机构</p>
+                        </div>
+                    </a>
+                    <a href="https://www.ispor.org" target="_blank" class="link-card">
+                        <div class="link-icon">🧪</div>
+                        <div class="link-info">
+                            <h4>国际药物经济学与结果研究学会 ISPOR</h4>
+                            <p>药物经济学与卫生经济学研究</p>
+                        </div>
+                    </a>
+                    <a href="https://www.ilo.org" target="_blank" class="link-card">
+                        <div class="link-icon">🤝</div>
+                        <div class="link-info">
+                            <h4>国际劳工组织 ILO</h4>
+                            <p>联合国社会保障相关机构</p>
+                        </div>
+                    </a>
+                    <a href="https://www.issa.int" target="_blank" class="link-card">
+                        <div class="link-icon">🛡️</div>
+                        <div class="link-info">
+                            <h4>国际社会保障协会 ISSA</h4>
+                            <p>社会保障国际组织</p>
                         </div>
                     </a>
                 </div>
@@ -242,21 +627,28 @@
                             <p>中共中央机关报</p>
                         </div>
                     </a>
-                    <a href="http://www.xinhuanet.com" target="_blank" class="link-card">
+                    <a href="https://www.news.cn" target="_blank" class="link-card">
                         <div class="link-icon">📡</div>
                         <div class="link-info">
                             <h4>新华社</h4>
                             <p>国家通讯社</p>
                         </div>
                     </a>
-                    <a href="http://www.jkb.com.cn" target="_blank" class="link-card">
+                    <a href="https://www.cctv.com" target="_blank" class="link-card">
+                        <div class="link-icon">📺</div>
+                        <div class="link-info">
+                            <h4>央视网</h4>
+                            <p>中央广播电视总台</p>
+                        </div>
+                    </a>
+                    <a href="https://www.jkb.com.cn" target="_blank" class="link-card">
                         <div class="link-icon">🏥</div>
                         <div class="link-info">
                             <h4>健康报</h4>
                             <p>卫生健康行业权威媒体</p>
                         </div>
                     </a>
-                    <a href="http://www.cn-healthcare.com" target="_blank" class="link-card">
+                    <a href="https://www.cn-healthcare.com" target="_blank" class="link-card">
                         <div class="link-icon">💊</div>
                         <div class="link-info">
                             <h4>医药经济报</h4>
@@ -266,8 +658,36 @@
                     <a href="https://www.zgylbx.com" target="_blank" class="link-card">
                         <div class="link-icon">📋</div>
                         <div class="link-info">
-                            <h4>中国卫生杂志</h4>
-                            <p>卫生政策与管理期刊</p>
+                            <h4>中国医疗保险网</h4>
+                            <p>国家级医保专业媒体（原"中国卫生杂志"更正）</p>
+                        </div>
+                    </a>
+                    <a href="https://www.chinanews.com.cn" target="_blank" class="link-card">
+                        <div class="link-icon">🌏</div>
+                        <div class="link-info">
+                            <h4>中国新闻网</h4>
+                            <p>中新社官方新闻网站</p>
+                        </div>
+                    </a>
+                    <a href="https://www.thepaper.cn" target="_blank" class="link-card">
+                        <div class="link-icon">📱</div>
+                        <div class="link-info">
+                            <h4>澎湃新闻</h4>
+                            <p>医改与医保深度报道</p>
+                        </div>
+                    </a>
+                    <a href="https://www.caixin.com" target="_blank" class="link-card">
+                        <div class="link-icon">💰</div>
+                        <div class="link-info">
+                            <h4>财新网</h4>
+                            <p>财经与医改深度报道</p>
+                        </div>
+                    </a>
+                    <a href="https://www.yicai.com" target="_blank" class="link-card">
+                        <div class="link-icon">📈</div>
+                        <div class="link-info">
+                            <h4>第一财经</h4>
+                            <p>财经资讯与产业报道</p>
                         </div>
                     </a>
                 </div>
@@ -280,24 +700,62 @@
                     <a href="https://fuwu.nhsa.gov.cn" target="_blank" class="link-card">
                         <div class="link-icon">🔍</div>
                         <div class="link-info">
-                            <h4>医保目录查询</h4>
-                            <p>国家医保药品目录查询</p>
+                            <h4>医保药品目录查询</h4>
+                            <p>国家医保药品目录在线查询</p>
                         </div>
                     </a>
                     <a href="https://fuwu.nhsa.gov.cn" target="_blank" class="link-card">
                         <div class="link-icon">🏥</div>
                         <div class="link-info">
-                            <h4>定点医疗机构查询</h4>
-                            <p>全国医保定点医院查询</p>
+                            <h4>定点医疗机构 / 药店查询</h4>
+                            <p>全国医保定点机构查询</p>
                         </div>
                     </a>
                     <a href="https://fuwu.nhsa.gov.cn" target="_blank" class="link-card">
                         <div class="link-icon">💊</div>
                         <div class="link-info">
-                            <h4>药品价格查询</h4>
+                            <h4>药品耗材价格查询</h4>
                             <p>集采中选药品价格查询</p>
                         </div>
                     </a>
+                    <a href="http://www.smpaa.cn" target="_blank" class="link-card">
+                        <div class="link-icon">📦</div>
+                        <div class="link-info">
+                            <h4>国家组织药品集采平台</h4>
+                            <p>上海阳光医药采购网 · 集采信息发布</p>
+                        </div>
+                    </a>
+                    <a href="https://zwfw.nmpa.gov.cn" target="_blank" class="link-card">
+                        <div class="link-icon">🗂️</div>
+                        <div class="link-info">
+                            <h4>国家药监局政务服务</h4>
+                            <p>药品注册、批准文号等查询</p>
+                        </div>
+                    </a>
+                    <a href="https://www.gov.cn/zhengce/" target="_blank" class="link-card">
+                        <div class="link-icon">📚</div>
+                        <div class="link-info">
+                            <h4>国务院政策文件库</h4>
+                            <p>国务院及部门政策文件检索</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- 最常用网站 -->
+            <section id="hot" class="category">
+                <h2 class="category-title">⭐ 最常用网站 Top 10</h2>
+                <div class="hot-grid">
+                    <a href="https://www.nhsa.gov.cn" target="_blank" class="hot-item"><span class="hot-num">1</span>国家医保局</a>
+                    <a href="https://fuwu.nhsa.gov.cn" target="_blank" class="hot-item"><span class="hot-num">2</span>国家医保服务平台</a>
+                    <a href="http://www.gov.cn" target="_blank" class="hot-item"><span class="hot-num">3</span>中国政府网</a>
+                    <a href="http://www.nhc.gov.cn" target="_blank" class="hot-item"><span class="hot-num">4</span>国家卫健委</a>
+                    <a href="https://www.nmpa.gov.cn" target="_blank" class="hot-item"><span class="hot-num">5</span>国家药监局</a>
+                    <a href="https://www.stats.gov.cn" target="_blank" class="hot-item"><span class="hot-num">6</span>国家统计局</a>
+                    <a href="https://www.zgylbx.com" target="_blank" class="hot-item"><span class="hot-num">7</span>中国医疗保险网</a>
+                    <a href="https://www.sogou.com" target="_blank" class="hot-item"><span class="hot-num">8</span>搜狗搜索</a>
+                    <a href="http://www.people.com.cn" target="_blank" class="hot-item"><span class="hot-num">9</span>人民日报</a>
+                    <a href="https://www.news.cn" target="_blank" class="hot-item"><span class="hot-num">10</span>新华社</a>
                 </div>
             </section>
 

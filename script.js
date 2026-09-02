@@ -1,13 +1,26 @@
 // 搜索功能
 function searchLinks() {
-    const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+    const input = document.getElementById('searchInput');
+    const searchTerm = input.value.trim().toLowerCase();
     const linkCards = document.querySelectorAll('.link-card');
-    
+
+    // 空搜索时重置全部显示
+    if (searchTerm === '') {
+        linkCards.forEach(card => {
+            card.style.display = 'flex';
+            card.style.animation = '';
+        });
+        return;
+    }
+
     linkCards.forEach(card => {
         const text = card.textContent.toLowerCase();
         if (text.includes(searchTerm)) {
             card.style.display = 'flex';
             card.style.animation = 'fadeIn 0.3s';
+            // 若匹配项在折叠栏目内，自动展开
+            const detail = card.closest('details');
+            if (detail) detail.open = true;
         } else {
             card.style.display = 'none';
         }

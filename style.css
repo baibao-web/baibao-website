@@ -71,14 +71,29 @@ body {
     background: rgba(255, 255, 255, 0.1);
 }
 
+.search-boxes {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .search-box {
     display: flex;
-    max-width: 600px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 570px;
     background: white;
     border-radius: 50px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.search-box.sogou-box button {
+    background: #ff7f2a;
+}
+
+.search-box.sogou-box button:hover {
+    background: #e06a14;
 }
 
 .search-box input {
@@ -182,6 +197,95 @@ body {
     font-size: 15px;
 }
 
+/* 折叠栏目 */
+.collapse {
+    margin-top: 15px;
+    border: 2px dashed #d1d5f0;
+    border-radius: 15px;
+    background: #fafbff;
+    padding: 5px;
+}
+
+.collapse summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 15px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #667eea;
+    text-align: center;
+    user-select: none;
+    transition: background 0.3s;
+}
+
+.collapse summary:hover {
+    background: #f0f2ff;
+}
+
+.collapse summary::-webkit-details-marker {
+    display: none;
+}
+
+.collapse[open] summary {
+    border-bottom: 2px dashed #d1d5f0;
+    margin-bottom: 10px;
+}
+
+.collapse .link-grid {
+    padding: 10px;
+}
+
+/* 常用网站 */
+.hot-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.hot-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.hot-item:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.hot-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    font-size: 13px;
+    flex-shrink: 0;
+}
+
+/* 备注小标签 */
+.note-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 400;
+    color: #764ba2;
+    background: #f0e6ff;
+    border-radius: 8px;
+    padding: 2px 8px;
+    margin-left: 6px;
+    vertical-align: 1px;
+}
+
 /* 页脚 */
 .footer {
     background: #2d3436;
@@ -207,10 +311,20 @@ body {
         margin-top: 15px;
         flex-wrap: wrap;
         justify-content: center;
+        gap: 6px;
+    }
+
+    .nav a {
+        padding: 6px 12px;
+        font-size: 13px;
     }
 
     .link-grid {
         grid-template-columns: 1fr;
+    }
+
+    .hot-grid {
+        grid-template-columns: 1fr 1fr;
     }
 
     .search-box {

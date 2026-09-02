@@ -338,3 +338,6 @@ body {
     }
 }
 
+
+/* 底部访问量统计 */
+.visitor-stat{text-align:center;color:rgba(255,255,255,.85);font-size:13px;padding-top:10px;}

@@ -60,3 +60,35 @@ window.addEventListener('load', function() {
         }, index * 100);
     });
 });
+
+// 医保信息：每日自动加载 info.json
+(function loadMedInfo() {
+    const map = { national: 'info-national', provincial: 'info-provincial', media: 'info-media' };
+    fetch('info.json?t=' + Date.now())
+        .then(r => r.ok ? r.json() : Promise.reject())
+        .then(data => {
+            if (data.updated) {
+                const u = document.getElementById('info-updated');
+                if (u) u.textContent = '更新时间：' + new Date(data.updated).toLocaleString('zh-CN');
+            }
+            for (const k in map) {
+                const ul = document.getElementById(map[k]);
+                if (!ul || !Array.isArray(data[k])) continue;
+                ul.innerHTML = '';
+                data[k].forEach(it => {
+                    const li = document.createElement('li');
+                    const a = document.createElement('a');
+                    a.href = it.url; a.target = '_blank'; a.rel = 'noopener';
+                    a.textContent = it.title + (it.date ? '（' + it.date + '）' : '');
+                    li.appendChild(a);
+                    ul.appendChild(li);
+                });
+            }
+        })
+        .catch(() => {
+            for (const k in map) {
+                const ul = document.getElementById(map[k]);
+                if (ul) ul.innerHTML = '<li class="info-loading">信息加载失败，请稍后刷新</li>';
+            }
+        });
+})();
